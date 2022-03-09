@@ -1,45 +1,51 @@
-export function decodedValue(colorVector:string) {
-  switch(colorVector){
-    case 'black':
-      var resp = '0'
-      break;
+export function decodedValue(colorVector:string[]) {
 
-    case 'brown':
-      var resp = '1'
-      break;
+  var resp : any = [3];
 
-    case 'red':
-      var resp = '2'
-      break;
+    for(var i = 0; i < colorVector.length; i++){
+      switch(colorVector[i]){
+        case 'black':
+          resp[i] = 0
+          break;
+    
+        case 'brown':
+          resp[i] = 1
+          break;
+    
+        case 'red':
+          resp[i] = 2
+          break;
+    
+        case 'orange':
+          resp[i] = 3
+          break;
+    
+        case 'yellow':
+          resp[i] = 4
+          break;
+    
+        case 'green':
+          resp[i] = 5
+          break;
+    
+        case 'blue':
+          resp[i] = 6
+          break;
+    
+        case 'violet':
+          resp[i] = 7
+          break;
+    
+        case 'grey':
+          resp[i] = 8
+          break;
+    
+        case 'white':
+          resp[i] = 9
+          break;
+      }
+    }
 
-    case 'orange':
-      var resp = '3'
-      break;
-
-    case 'yellow':
-      var resp = '4'
-      break;
-
-    case 'green':
-      var resp = '5'
-      break;
-
-    case 'blue':
-      var resp = '6'
-      break;
-
-    case 'violet':
-      var resp = '07'
-      break;
-
-    case 'grey':
-      var resp = '8'
-      break;
-
-    case 'white':
-      var resp = '9'
-      break;
+    var resultado : number = resp[0]*10 + resp[1];
+    return resultado;
   }
-
-  throw new Error('Remove this statement and implement this function')
-}
