@@ -1,0 +1,59 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\ca057239\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
+
+PATH: 
+  C:\Python310\Scripts\;C:\Python310\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Go\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;C:\Users\ca057239\AppData\Local\Programs\Microsoft VS Code\bin;%USERPROFILE%\go\bin;C:\Users\ca057239\AppData\Roaming\npm;C:\Exercism
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.14.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: unable to get local issuer certificate
+      at TLSSocket.onConnectSecure (node:_tls_wrap:1530:34)
+      at TLSSocket.emit (node:events:520:28)
+      at TLSSocket._finishInit (node:_tls_wrap:944:8)
+      at TLSWrap.ssl.onhandshakedone (node:_tls_wrap:725:12)
+
+npm manifest: 
+  {
+    "name": "@exercism/typescript-leap",
+    "version": "1.0.0",
+    "description": "Exercism exercises in Typescript.",
+    "private": true,
+    "repository": "https://github.com/exercism/typescript",
+    "type": "module",
+    "engines": {
+      "node": "^14.13.1 || >=16.0.0"
+    },
+    "devDependencies": {
+      "@exercism/babel-preset-typescript": "^0.1.0",
+      "@exercism/eslint-config-typescript": "^0.4.1",
+      "@types/jest": "^27.4.0",
+      "@types/node": "^16.11.24",
+      "babel-jest": "^27.5.1",
+      "core-js": "^3.21.0",
+      "eslint": "^8.9.0",
+      "jest": "^27.5.1",
+      "typescript": "^4.5.4"
+    },
+    "scripts": {
+      "test": "yarn lint:types && jest --no-cache",
+      "lint": "yarn lint:types && yarn lint:ci",
+      "lint:types": "yarn tsc --noEmit -p .",
+      "lint:ci": "eslint . --ext .tsx,.ts"
+    },
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

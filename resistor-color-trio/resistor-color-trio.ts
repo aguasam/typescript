@@ -46,15 +46,15 @@ export function decodedResistorValue(colorVector:string[]) {
       }
     }
 
-    var valor : number = (resp[0]*10 + resp[1]) * 10^resp[2];
-    console.log(resp)
-    console.log('( ' + resp[0]*10 + ' + ' + resp[1] + ') * ' + (10^resp[2]) )
-    console.log(valor)
-    if(resp[2]<3){
+    if(resp[2]<2){
       var nome : string = ' ohms'
     }else{
-      var nome : string = ' kiloomhs'
+      var nome : string = ' kiloohms'
+      resp[2] -= 3
     }
+
+    var valor : number = (resp[0]*10 + resp[1]) * 10**resp[2];
+    
     var resultado : string = valor + nome; 
     return resultado;
   }
